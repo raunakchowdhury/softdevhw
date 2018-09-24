@@ -1,4 +1,4 @@
-# Choidhury —- Soojin Choi and Raunak Chowdhury
+# Choidhury -- Soojin Choi and Raunak Chowdhury
 # Softdev1 pd8
 # K#10: Jinja Tuning
 # 2018-09-23
