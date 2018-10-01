@@ -5,7 +5,10 @@
     <title> Form</title>
   </head>
   <body>
-    <form class="action" action="/auth" method="get">
+    {% if resubmit %}
+      <p>Wrong request method!</p>
+    {% endif %}
+    <form class="action" action="/auth" method="POST">
       Input name here: <input type="text" name="name"> <br>
       <button type="Submit" name="submit"> Submit</button>
     </form>

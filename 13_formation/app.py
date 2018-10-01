@@ -1,7 +1,7 @@
 # Raunak Chowdhury
 # Softdev1 pd8
-# K#13: Echo Echo Echo
-#2018-09-24
+# K# ##:  text
+#2018- ##- ##
 
 from flask import Flask, render_template, request
 
@@ -11,13 +11,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/auth')#, methods = ['POST'])
+@app.route('/auth', methods = ['POST', 'GET'])
 def auth():
-    print(app)
-    print(request)
-    name = request.args['name']
-    method = request.method
-    return render_template('greeting.html', name = name, method = method)
+    if request.method == 'POST':
+        return render_template('greeting.html', name = request.form['name'], method = request.method)
+    return render_template('index.html', resubmit = True)
 
 if __name__ == '__main__':
     print(app)
