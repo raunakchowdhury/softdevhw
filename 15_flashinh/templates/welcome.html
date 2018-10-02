@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,6 +7,8 @@
     <title>Welcome!</title>
   </head>
   <body>
+    {% body content %}
     You're logged in! <a href="/logout"> Logout.</a>
+    {% endblock %}
   </body>
 </html>

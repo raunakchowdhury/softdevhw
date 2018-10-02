@@ -1,9 +1,9 @@
 # Raunak Chowdhury, Thomas Zhao
 # Softdev1 pd8
-# K14 -- Do I Know You?
-# 2018-10-01
+# K15 -- Oh yes, perhaps I do…
+# 2018-10-02
 
-from flask import Flask, render_template, session, url_for, redirect, request
+from flask import Flask, render_template, session, url_for, redirect, request, flash
 import os
 
 app = Flask(__name__)
@@ -24,8 +24,10 @@ def auth():
             session['chowder'] = 'zhao' #add to session
             return redirect(url_for('index')) #will load welcome root page
         else:
-            return render_template('error.html', error_msg = 'Invalid password!') #these are errors
-    return render_template('error.html', error_msg = 'Invalid username!')
+            flash("Invalid password!")
+            return render_template('login.html', error = True) #these are errors
+    flash("Invalid username!")
+    return render_template('login.html', error = True) #these are errors
 
 @app.route('/logout')
 def log_out():

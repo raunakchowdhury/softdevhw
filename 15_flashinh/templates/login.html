@@ -1,10 +1,19 @@
+{% extends "base.html" %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
   </head>
   <body>
+    {% block error_msg %}
+      {% if error %}
+        {% set msgs = get_flashed_messages() %}
+        {{ msgs[0] }}
+      {% endif %}
+    {% endblock %}
+
+    {% block content %}
     <form class="" action="/auth" method="post">
       Username: <br>
       <input type="text" name="user" value=""> <br>
@@ -12,5 +21,6 @@
       <input type="text" name="pass" value=""> <br> <br>
       <input type="submit" name="" value="submit">
     </form>
+    {% endblock %}
   </body>
 </html>
