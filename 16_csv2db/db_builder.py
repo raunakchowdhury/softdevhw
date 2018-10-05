@@ -23,7 +23,7 @@ with open('raw/courses.csv') as csvfile: #open csv file and store as DictReader
         #print(lines.keys())
         #print(lines)
         #print(lines.values())
-        command = 'INSERT INTO courses VALUES(\"{}\",{},{})'.format(lines['code'], int(lines['id']), int(lines['mark']))
+        command = 'INSERT INTO courses VALUES(\"{}\",{},{})'.format(lines['code'], int(lines['id']), int(lines['mark'])) #you MUST have quotes for TEXt entries!
         #print(command)
         c.execute(command)
 
@@ -32,7 +32,7 @@ with open('raw/occupations.csv') as csvfile: #open csv file and store as DictRea
     command = 'CREATE TABLE occupations (Job Class TEXT, Percentage INTEGER)'
     c.execute(command)
     for lines in reader:
-        cleaned_job = lines['Job Class'].strip('\"')
+        cleaned_job = lines['Job Class'].strip('\"') #strip all unnescessary quotes
         command = 'INSERT INTO occupations VALUES(\"{}\",{})'.format(cleaned_job, float(lines['Percentage']))
         c.execute(command)
 
