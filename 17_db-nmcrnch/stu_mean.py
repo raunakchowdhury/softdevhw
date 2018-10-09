@@ -40,12 +40,12 @@ def compute_average(student):
     db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
     c = db.cursor()               #facilitate db ops
 
-    command = 'SELECT mark FROM peeps, courses WHERE peeps.id = courses.id AND name = {}'.format(student) #find courses taken by that student
+    command = 'SELECT code, mark FROM peeps, courses WHERE peeps.id = courses.id AND name = {}'.format(student) #find courses taken by that student
     c.execute(command)
 
     # each entry is organized as (code,mark)
     for entry in c:
-        average += entry[0]
+        average += entry[1]
         num_subjects += 1
 
     db.close()
@@ -117,8 +117,8 @@ def generate_average_table():
         info_list = name_dict[key] #list that contains [grade, # courses, id]
         info_list[0] = info_list[0] / info_list[1]
         #insert the values in as (id, avg)
-        command = 'INSERT INTO peeps_avg VALUES({},{})'.format(info_list[2], info_list[0])
-        c.execute(command)
+        command_tuple = (info_list[2], info_list[0])
+        c.execute('INSERT INTO peeps_avg VALUES(?,?)', command_tuple)
 
     db.commit()
     db.close()
@@ -136,14 +136,14 @@ def add_course(code, new_id, mark):
     code = '\"{}\"'.format(code) # necessary for comparing names
 
     # find and update the peeps_avg table with the new value
-    command = 'INSERT INTO courses VALUES({},{},{})'.format(code, new_id, mark)
-    c.execute(command)
+    command_tuple = (code, new_id, mark)
+    c.execute('INSERT INTO courses VALUES(?,?,?)', command_tuple)
 
     db.commit()
     db.close()
 
 if __name__ == '__main__':
-    generate_average_table()
+    #generate_average_table()
     print(lookup_grades('kruder'))
     print('Average of kruder: {}'.format(compute_average('kruder')))
     add_course('apcs', 1, 95)
