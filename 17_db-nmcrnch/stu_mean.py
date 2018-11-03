@@ -143,7 +143,7 @@ def add_course(code, new_id, mark):
     db.close()
 
 if __name__ == '__main__':
-    #generate_average_table()
+    generate_average_table()
     print(lookup_grades('kruder'))
     print('Average of kruder: {}'.format(compute_average('kruder')))
     add_course('apcs', 1, 95)

@@ -1,0 +1,6 @@
+[submodule "nani_story"]
+	path = nani_story
+	url = https://github.com/JoanChirinos/nani_story.git
+[submodule "story_nani"]
+	path = story_nani
+	url = git@github.com:JoanChirinos/nani_story.git

@@ -1,0 +1,42 @@
+html{
+    background: gray;
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center; 
+    color: white; 
+    background: lightgray;
+}
+
+ul{
+    list-style-type: none; 
+    text-decoration-color: white; 
+    padding-left: 0;
+}
+
+li a{
+    color: white; 
+    text-decoration: none;
+}
+
+#left{
+    float: left; 
+    padding-right: 100px;
+}
+
+#right{
+    float: left; 
+    width: 75%;
+}
+
+#fake-copyright{
+    float: right;  
+    padding-left: 100%; 
+    padding-top: 15px; 
+    padding-bottom: 15px;
+    padding-right: 10px;
+    background: #535559; 
+    white-space: nowrap; 
+    color: #808389;
+}
