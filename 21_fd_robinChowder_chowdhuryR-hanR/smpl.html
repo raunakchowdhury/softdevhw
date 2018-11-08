@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">
+    <title> Sample site</title>
+  </head>
+  <body>
+    <div class = "callout small">
+        A few things:
+        <ul>
+            <li> 
+                The class <b>grid-container</b> defines a container in which "cells," or other divs with specific properties, should be placed.
+            </li>
+            <li> 
+                The class <b>grid-x grid-padding-x</b> essentially acts as a new line within the grid-container, allowing placement of multiple cells on the same line.
+            </li>
+            <li> 
+                As you've probably noticed, this div isn't attached to a grid-container. This is a div known as a <b>callout</b>, which is a colored element. There are multiple types:
+                <ul>
+                    <li> <b style = "color:blue">primary callout</b> </li>
+                    <li> <b style = "color: gray">callout secondary</b> </li>
+                    <li> <b style = "color: green">callout success</b></li>
+                    <li> <b style = "color: orange">callout alert</b></li>
+                    <li> <b style = "color: red">callout warning</b></li>
+                </ul>
+                Callouts can be attached to any cell or grid.
+            </li>
+        </ul>
+    </div>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+            <div class="primary callout">
+                <h1>This is a cell of size 12!</h1>
+            </div>
+        </div>
+        </div>
+       <div class="grid-x grid-padding-x">
+            <div class ="large-4 medium-4 cell">
+                <div class="primary callout">
+                    <p> Notice the blue border. This is from the class <b>primary callout</b>. It lets us highlight different cells.</p>
+                </div>
+            </div>
+            <div class="large-6 medium-6 cell">
+                <div class = "callout warning">
+                    This is a cell on the same line as the 4 cell. This cell is using the class <b>callout warning</b>, which is another customization of the callout class. Also notice how this text is packed into a space instead of spreading across the page.
+                </div>
+            </div>
+            <div class="large-4 medium-4 cell">
+                <div class="primary callout">                 
+                    I am a cell of size 4! Notice how I'm on a new line. This is because a grid is defined as having a maximum of <b>size 12</b>.
+                </div>
+           </div>
+        </div>
+        <div class = "grid-container">
+            <div class = "grid-x grid-padding-x">
+                <div class = "primary callout">
+                    <div class = "large-12 medium-12 cell">
+                        Sample size 12 cell! Notice how my size only changes with respect to the text!
+                    </div>
+                </div>
+            </div>
+            <div class = "grid-x grid-padding-x">
+                <div class = "large-6 medium-6 cell">
+                    <div class = "callout secondary">
+                        Cell 1 of size 6!
+                    </div>
+                </div>
+                <div class = "large-6 medium-6 cell">
+                    <div class = "callout secondary">
+                        Cell 2 of size 6!
+                    </div>
+                </div>
+            </div>
+          <div class = "grid-x grid-padding-x">
+            <div class="large-4 medium-4 cell">
+                <div class="primary callout">                 
+                    Cell 1 of size 4!
+                </div>
+            </div>
+            <div class="large-4 medium-4 cell">
+                <div class="callout alert">
+                    Cell 2 of size 4!
+                </div>
+            </div>
+            <div class="large-4 medium-4 cell">
+                <div class="callout warning">
+                    Cell 3 of size 4!
+                </div>
+            </div>
+            </div>
+        </div>
+
+</div>
+    <!---
+        <div class="large-6 medium-6cell" id="han">
+            <div class="primary callout">
+            yeeer
+            </div>
+            <h1>another cell</h1>
+        </div> -->
+
+
+  </body>
+</html>
