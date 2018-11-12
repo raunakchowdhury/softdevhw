@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Shoe buckle Wannabe</title>
+        <style type="text/css">
+            #links{
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar fixed-top bg-dark">
+            <a href="#home" id="links">Home</a>
+            <a href="#intro" id="links">Introduction</a>
+            <a href="#container" id="links">Containers</a>
+            <a href="#buttons" id="links">Buttons</a>
+            <a href="#media" id="links">Media</a>
+            <a href="#alerts" id="links">Alerts</a>
+            <a href="#tables" id="links">Tables</a>
+        </nav>
+        <div class="container">
+            <div id = "home">
+                <br><br>
+                <h1>Bootstrap!</h1>
+                <h3>A replica to the introductory page to Bootstrap!</h3>
+
+                <h4>By Han Chowder</h4>
+                <p>
+                This is part of a container (note the padding on the sides).
+                <br>
+                If you try to resize your window, the text will be adjusted according to new dimensions
+                </p>
+            </div>
+
+            <div id = "intro">
+            <h4>Introduction</h4>
+            <p>If you already have Bootstrap in your style sheet, <a href="#cols">skip this section.</a>
+                <br>
+                To add Bootstrap CSS to your site, add the following line of code into the head section of your html file.
+            </p>
+            <pre style="background-color: gray">
+                <xmp>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                </xmp>
+            </pre>
+            <p> You can also download and use a local version of the CSS sheet.  This is not recommended, but if you want to learn more <a href="http://getbootstrap.com/docs/4.1/getting-started/download/">here.</a>
+            </p>
+            </div>
+
+            <br>
+            <br>
+
+        <div id="container">
+            <h4>Containers</h4>
+            <p>
+                With bootstrap, you are able to create containers that will dynamically resize and can be divided into 1-12 sections. This is written as follows:
+                <br>
+                <pre>
+                    <xmp style="background-color: gray">
+                        <div class="container row col-sm">
+                            <div class="row">
+                                <div class="col-sm">
+                                    The number of times this piece is repeated is the number of columns
+                                </div>
+                            </div>
+                        </div>
+                    </xmp>
+                </pre>
+            </p>
+            <div>
+                <div class="row">
+                    <div class="col-sm">
+                        One of three columns
+                    </div>
+                    <div class="col-sm">
+                        One of three columns
+                    </div>
+                    <div class="col-sm">
+                        One of three columns
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="row">
+                    <div class="col-sm">
+                        One of four columns
+                    </div>
+                    <div class="col-sm">
+                        One of for columns
+                    </div>
+                    <div class="col-sm">
+                        One of cuatro columns
+                    </div>
+                    <div class="col-sm">
+                        One of tres + uno columns
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="row">
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 12 columns
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>The number of columns is limited to 12.  As you can see below, if there are more columns than that they will wrap to the next line.</p>
+            <div>
+                <div class="row">
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                    <div class="col-sm">
+                        One of 13 columns
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <div id = "buttons">
+            <h4>Buttons</h4>
+            <p>
+                With bootstrap, you are able to create buttons of many styles without the hastle of making them look nice. This is written as follows:
+            </p>
+            <pre>
+                <xmp style="background-color: lightgray">
+                    <button type="button" class="btn btn-XXXX">Title</button>
+                </xmp>
+            </pre>
+            <p>The different styles are displayed below with their names (what would replace XXXX in the code above).
+            </p>
+
+            <button type="button" class="btn btn-primary">primary</button>
+            <button type="button" class="btn btn-secondary">secondary</button>
+            <button type="button" class="btn btn-success">success</button>
+            <button type="button" class="btn btn-danger">danger</button>
+            <button type="button" class="btn btn-warning">warning</button>
+            <button type="button" class="btn btn-info">info</button>
+            <button type="button" class="btn btn-light">light</button>
+            <button type="button" class="btn btn-dark">dark</button><br><br>
+            <h5>Other button styles</h5>
+            
+            <p>Note: These can all be used with all above styles, primary is being used as an example.</p>
+            <h6>Outline buttons</h6>
+            <pre>
+                <xmp style="background-color: gray">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                </xmp>
+            </pre>
+            <br>
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <br>
+            <h6>Disabled buttons</h6>
+            <pre>
+                <xmp style="background-color: gray">
+                    <button type="button" class="btn btn-primary" disabled>Primary</button>
+                </xmp>
+            </pre>
+            <br>
+            <button type="button" class="btn btn-primary" disabled>Primary</button>
+            <br>
+            <p>Try pressing the button above!<br>Note: This does not prevent the button from being clicked at all costs; someone can always edit the html from their browser!</p>
+            <br>
+            <h6>Buttons as a class</h6>
+            <pre>
+                <xmp style="background-color: gray">
+                    <a class="btn btn-primary" href="#" role="button">Link</a>
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </xmp>
+            </pre>
+            <br>
+            <a class="btn btn-primary" href="#" role="button">Link</a>
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </div>
+
+
+		<div id="media">
+            <br>
+            <br>
+            <h4>Media</h4>
+            <p>Bootstrap takes care of problems with displaying media objects alongside text.</p>
+            <div class="media">
+                <img class="mr-3" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git octopus">
+                <div class="media-body">
+                    <h5 class="mt-0">Media heading</h5>
+                    Text is formatted next to the image automatically.
+                </div>
+            </div>
+            Basic code for media formatting
+            <pre>
+                <xmp style="background-color: gray">
+                <div class="media">
+                    <img class="mr-3" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git octopus">
+                    <div class="media-body">
+                        <h6 class="mt-0">Media heading</h6>
+                        Text is formatted next to the image automatically.
+                    </div>
+                </div>
+                </xmp>
+            </pre>
+        </div>
+
+        <br>
+		<div id="alerts">
+            <h4>Alerts</h4>
+            <h6>Alerts can be triggered to inform users of info.  They can be used with any of the styles that you can use with buttons.</h6>
+            <div>
+                <div class="alert alert-primary" role="alert">primary alert</div>
+                <div class="alert alert-secondary" role="alert">secondary alert</div>
+                <div class="alert alert-success" role="alert">success alert</div>
+            </div>
+            <pre>
+            <xmp style="background-color: gray">
+                <div class="alert alert-primary" role="alert">primary alert</div>
+            </xmp>
+            </pre>
+        </div>
+
+        <br>
+		<div id="tables">
+            <h4>Tables</h4>
+            <p>
+            Bootstrap provides easy customization for tables, which are designed to be opt-in.
+            </p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">col1</th>
+                        <th scope="col">col2</th>
+                        <th scope="col">col3</th>
+                        <th scope="col">col4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>1.1</td>
+                        <td>1.2</td>
+                        <td>1.3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>2.1</td>
+                        <td>2.2</td>
+                        <td>2.3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>3.1</td>
+                        <td>3.2</td>
+                        <td>3.3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <pre>
+                        <xmp style="background-color: gray">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">col1</th>
+                                <th scope="col">col2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>1.1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </xmp>
+            </pre>
+        </div>
+    </body>
+</html>
