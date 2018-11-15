@@ -22,7 +22,7 @@ def home():
     args['bored'] = ('Bored', access_info(URL)['activity'])
 
 
-    # Pokemon API by Tina Wong
+    # NY Times API by Puneet Johal
     URL_STUB = 'http://api.nytimes.com/svc/topstories/v2/home.json?api-key='
     API_KEY = 'a0232fcf73d345d5901d4f850939650b'
     args['nytimes'] = ('New York Times Top Stories', access_info(URL_STUB, API_KEY)['results'][0])
